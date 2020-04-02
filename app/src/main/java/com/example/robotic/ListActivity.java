@@ -1,6 +1,6 @@
 package com.example.robotic;
 
-
+/*
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -28,8 +28,8 @@ public class ListActivity extends AppCompatActivity {
 
 
 
-        ArrayAdapter adapter = new PlacasAdapter(this, adicionarPlacas());
-        listview1.setAdapter(adapter);
+        //ArrayAdapter adapter = new PlacasAdapter(this, adicionarPlacas());
+       // listview1.setAdapter(adapter);
 
         //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, dados);
        //listview.setAdapter(adapter);
@@ -80,3 +80,5 @@ public class ListActivity extends AppCompatActivity {
 
 
 }
+
+*/

@@ -6,10 +6,10 @@ public class Placas {
     private String mac; // vai armazenar o identificador do recurso
     private String status;
 
-    public Placas(String nome, String endereco, String imagem) {
+    public Placas(String nome, String endereco, String status) {
         this.nome = nome;
         this.mac = endereco;
-        this.status = imagem;
+        this.status = status;
     }
 
     public String getNome() {
