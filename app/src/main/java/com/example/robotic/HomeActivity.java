@@ -1,9 +1,16 @@
 package com.example.robotic;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
+import com.example.robotic.ui.gallery.FilesFragment;
+import com.example.robotic.ui.home.HomeFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -17,7 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 public class HomeActivity extends AppCompatActivity {
-
+    private Button bt_config;
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -45,6 +52,9 @@ public class HomeActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+       // Button bt_config = (Button) findViewById( R.layout.b )
+
     }
 
     @Override
@@ -52,6 +62,28 @@ public class HomeActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
         return true;
+    }
+
+
+    public void showMenu(View v) {
+        PopupMenu popup = new PopupMenu(this, v);
+
+        // This activity implements OnMenuItemClickListener
+        popup.setOnMenuItemClickListener( (PopupMenu.OnMenuItemClickListener) this );
+        popup.inflate(R.menu.home);
+        popup.show();
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.bt_config:
+                //Toast.makeText( HomeActivity.this,"Olá +R",Toast.LENGTH_SHORT ).show();
+                Intent i = new Intent( this,ConfigActivity.class);
+                startActivity( i );
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override

@@ -2,8 +2,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/bt_config"
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/bt_ajuda"
+        android:orderInCategory="100"
+
+        android:title="Ajuda">
+
+    </item>
+
+    <item
+        android:id="@+id/Save"
+        android:title="Ajuda"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_save_black_24dp"
+        app:showAsAction="ifRoom"
+        >
+
+    </item>
+
+
+
+
+
+
 </menu>
